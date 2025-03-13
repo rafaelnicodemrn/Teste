@@ -1,1 +1,26 @@
+def fibonacci(numero):
+    """
+    Calcula a sequência de Fibonacci até um número maior ou igual ao número informado
+    e verifica se o número informado pertence à sequência.
 
+    Args:
+        numero: O número a ser verificado.
+    """
+
+    a, b = 0, 1
+    sequencia = [0, 1]
+
+    while b <= numero:
+        if b == numero:
+            print(f"O número {numero} pertence à sequência de Fibonacci.")
+            return
+
+        a, b = b, a + b
+        sequencia.append(b)
+
+    print(f"O número {numero} não pertence à sequência de Fibonacci.")
+    print("Sequência gerada: ", sequencia)
+
+# Exemplo de uso:
+numero_informado = int(input("Digite um número inteiro: "))
+fibonacci(numero_informado)
